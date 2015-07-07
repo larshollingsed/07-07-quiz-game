@@ -1,11 +1,10 @@
 var correct = 0;
-var wrong = 0;
+
 function winOrLose (answer, guess) {
-    if (answer == guess.toLowerCase()) {
+    if (answer == guess) {
       correct++
       alert("Correct!")
     } else {
-      wrong++
       alert("Incorrect :( ")
     }
 };
@@ -29,4 +28,4 @@ for (index = 0, guess = "z"; index < questions.length; index++, guess = "z") {
 }
 
 var rounds = wrong + correct
-alert ("Out of " + rounds + " questions, you answered " + correct + " correctly\n" + (correct / rounds * 100).toFixed(0) + "% correct");
+alert ("Out of " + rounds + " questions, you answered " + correct + " correctly\n" + (correct / questions.length * 100).toFixed(0) + "% correct");
